@@ -15,15 +15,15 @@ let divide = function(value1, value2) {
     return `${value1}` / `${value2}`
 }
 
-let calculate = function(value1, value2, fn) {
+let calculate = function(value1, value2, Fn) {
     let result
-    switch(fn) {
-        case '-': result = minus(value1, value2); break
-        case '*': result = multiple(value1, value2); break
-        case '/': result = divide(value1, value2); break
+    switch(Fn) {
+        case minus: result = minus(value1, value2); break
+        case multiple: result = multiple(value1, value2); break
+        case divide: result = divide(value1, value2); break
         default: result = multiple(value1, value2)
     }
     return result
 }
 
-console.calculate(10, 5, minus)
+console.log(calculate(10, 5))
