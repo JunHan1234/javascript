@@ -1,3 +1,4 @@
+//function은 object(객체)이다.
 function greet() {
     console.log('hello')
 }
@@ -33,12 +34,12 @@ let shout = function() {
 let speak = shout() //변수 speak에 function을 저장.
 speak(); //저장된 function을 call
 
-//1회용 function, 위 코드와 분별을 못하므로 ;으로 분별시켰다.
+//1회용 function, nodejs가 위 코드와 분별을 못하므로 ;으로 분별시켰다.
 (function() {
     console.log('earth')
 })()
 
-let myFn = function(fn/*알아서 parameter로 function값이 들어오는구나 하고 취급. */) {
+let myFn = function(fn/*알아서 parameter로 function값이 들어오는구나 하고 취급.(callback)*/) {
     const result = fn()
     console.log(result)
 }

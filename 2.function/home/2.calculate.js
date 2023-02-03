@@ -4,27 +4,21 @@
 */
 
 function minus(value1, value2) {
-    return `${value1 - value2}`
+    return value1 - value2
 }
 
-function multiple(value1, value2) {
-    return `${value1 * value2}`
+function multiply(value1, value2) {
+    return value1 * value2
 }
 
 function divide(value1, value2) {
-    return `${value1 / value2}`
+    return value1 / value2
+}
+//callback을 이용하는것은 calculator parameter로 function이 들어가야한다.
+function calculator(value1, value2, op=multiply) {
+    return op(value1, value2)
 }
 
-let calculator = function(value1, value2, op='*') {
-    let result
-    switch(op) {
-        case '-': result = minus(value1, value2); break
-        case '*': result = multiple(value1, value2); break
-        case '/': result = divide(value1, value2)
-    }
-    return result
-}
-
-console.log(calculator('10', '5', '-'))
-console.log(calculator('10', '5', '/'))
+console.log(calculator('10', '5', minus))
+console.log(calculator('10', '5', divide))
 console.log(calculator('10', '5'))

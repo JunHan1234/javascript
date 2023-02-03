@@ -25,6 +25,7 @@ console.log(1 && 2, 2 && 1) //마지막으로 읽은 true값을 return. false가
 
 //중요!
 //foo && A논리 // foo가 true이면 A논리까지 읽어서 false인지 알아내고 전개.
+//                      false면 A논리 pass.
 //bar = baz || createBar() // baz 값을 읽고 true이면 우변을 읽지 않고 bar에 baz값 대입.
 
 console.log() //줄바꿈

@@ -14,10 +14,11 @@ let $user
 let userName //신세대 선호. camel case
 let user_name //구세대 선호. snake case
 
-const x = 1 //상수 선언 (constant)
+const x = 1 //상수 선언 (constant), 초기값을 할당해야한다.
 // terminal에서 폴더 경로로 간 후 node 1.variable 입력,
 // 실행하고 오류를 확인하라.
 //x = 2 //constant에 값 교체 불가.
+//보통 const 상수에 function을 할당한다.
 
 let y
 y = 1

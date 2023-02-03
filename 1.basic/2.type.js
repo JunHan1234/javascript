@@ -53,7 +53,7 @@ let b = NaN * 2         //NaN
 let c = Infinity * NaN  //NaN
 console.log(a, b, c)
 
-//big int type: 2^53 - 1 bit를 초과하면 big int이다.
+//big int type: 2**53 - 1 bit를 초과하면 big int이다.
 foo = 1n
 
 //boolean type
@@ -70,8 +70,9 @@ console.log(val2)
 val2 = undefined // 기술할 수도 있다.
 console.log(typeof val2)
 
+//Symbol(), String(), Number()는 생성자이다.
 //symbol type
-let id = Symbol('id') // return 값이 Symbol type이다.
+let id = Symbol('id') // return 값이 Symbol type 이다.
 console.log(typeof id)
 
 //casting
@@ -101,3 +102,11 @@ console.log(Number('a'), Number(undefined), Number(NaN))
 console.log(Boolean(-1), Boolean('a'), Boolean('0'), Boolean(' '))
 //값이 없으므로 false
 console.log(Boolean(0), Boolean(''), Boolean(null), Boolean(undefined), Boolean(NaN))
+/*
+// a값이 undefined이면, false이므로, if문을 건너뛰고 else문 출력.
+if(a) {
+
+} else {
+    errMsg~
+}
+*/
