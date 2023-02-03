@@ -15,7 +15,9 @@ let userName //신세대 선호. camel case
 let user_name //구세대 선호. snake case
 
 const x = 1 //상수 선언 (constant)
-//x = 2 //constant에 값 교체 불가. terminal에서 폴더 경로로 간 후 node 1.variable 입력, 실행하고 오류를 확인하라.
+// terminal에서 폴더 경로로 간 후 node 1.variable 입력,
+// 실행하고 오류를 확인하라.
+//x = 2 //constant에 값 교체 불가.
 
 let y
 y = 1

@@ -1,10 +1,12 @@
 let val = 1 + 2 * 3 / 2
-console.log(val, 5 % 2, 4 ** 2, 4 ** (1/2)) // %나머지, 제곱, 루트
+console.log(val, 5 % 2/*나머지*/, 4 ** 2/*제곱*/, 4 ** (1/2)/*루트*/)
 
 let i = 1
-console.log(++i, i++)
+console.log(i++)
+console.log(++i/*i를 1증가시키고 log출력.*/,
+             i++/*위에서 1증가한 i값을 log출력 후에 1증가.*/)
 
-//붙이기 연산자
+//붙이기 연산자 +
 let foo = 'hello'
 let bar = 'world'
 console.log(foo + ' ' + bar)
@@ -14,7 +16,8 @@ console.log(1 + '2', '1' + '2')
 console.log(1 + +'2')
 
 //true or false(1 || 0),
-console.log(1 || 0, 0 || 1) //1을 읽고 이미 true이므로 1을 return, 0을 읽고 false이므로 뒤를 마저읽어서 true값 찾고 return.
+console.log(1 || 0/*1을 읽고 이미 true이므로 1을 return*/,
+            0 || 1/*0을 읽고 false이므로 뒤를 마저읽어서 true값 찾고 return*/)
 //true and false(1 && 0)
 console.log(1 && 0, 0 && 1)
 
@@ -41,8 +44,14 @@ console.log('2' > 1, '01' == 1) //알아서 string type을 number type으로 변
 console.log(false == 0, '0' == 0, '' == false) //전부 number로 변환처리된 후 boolean type return한다.
 console.log(true > 1) //boolean이 number로 변환처리됨을 확인가능.
 
-console.log(1 == '1', 1 != '1')   //equivalent: data type이 number로 변환된 후 연산.
-console.log(1 === '1', 1 !== '1') //identical:  data type까지 같은지 다른지 신경쓰는 연산.
+console.log() //줄바꿈
+
+//equivalent: data type이 number로 변환된 후 연산.
+console.log(1 == '1', 1 != '1')
+//identical:  data type까지 같은지 다른지 신경쓰는 연산.
+console.log(1 === '1', 1 !== '1')
+
+console.log() //줄바꿈
 
 //문자의 비교연산
 //number type(unicode)로 변환 후 비교연산 수행함.

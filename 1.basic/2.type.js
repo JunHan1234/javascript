@@ -6,7 +6,6 @@ foo = `back tick` //``도 string type이다.
 foo = 'He said, "javascript is awesome"'
 //escape 문자로 인용문구를 쓸수도 있다.
 foo = "He said, \"javascript is awesome\""
-
 //number type이다.
 foo = 1
 //똑같이 number type이다.
@@ -18,6 +17,8 @@ console.log(1 / 0)
 //terminal node 2.type 실행하고 NaN 출력을 확인하자. (NaN: Not a Number)
 console.log('a' / 1)
 
+console.log() //줄바꿈
+
 //data type을 조사하는 function isFinite()
 //variable type : dynamic type(동적 타입) = duck type
 foo = 1 //1을 담았기에 number type
@@ -27,10 +28,14 @@ foo = 'a' //'a'를 담았기에 string type
 console.log(isFinite(foo))  //숫자인가? -> false.
 console.log(isNaN(foo))     //숫자가 아닌가? -> true.
 
+console.log() //줄바꿈
+
 foo = '1'
 console.log(parseInt(foo))  //return값은 number type이다.
-console.log(foo + 1)
+console.log(foo + 1) //string type +(붙이기 연산자) number type = string type.
 console.log(parseInt(foo) + 1) //return값이 number type인지 확인하라의 답.
+
+console.log() //줄바꿈
 
 foo = 'a'       //number type으로 변환 불가일 경우, 값은 NaN.
 foo = '100px'   //javascript의 태생은 browser이기 때문에 px(픽셀)을 숫자로 알아서 변환 가능.
@@ -48,7 +53,8 @@ let b = NaN * 2         //NaN
 let c = Infinity * NaN  //NaN
 console.log(a, b, c)
 
-foo = 1n    //big int type: 2^53 - 1 bit를 초과하면 big int이다.
+//big int type: 2^53 - 1 bit를 초과하면 big int이다.
+foo = 1n
 
 //boolean type
 const okay = true
@@ -64,7 +70,7 @@ console.log(val2)
 val2 = undefined // 기술할 수도 있다.
 console.log(typeof val2)
 
-//simbol type
+//symbol type
 let id = Symbol('id') // return 값이 Symbol type이다.
 console.log(typeof id)
 

@@ -3,29 +3,28 @@
 -, *, / 연산을 callback으로 처리한다.
 */
 
-let minus = function(value1, value2) {
-    return `${value1}` - `${value2}`
+function minus(value1, value2) {
+    return `${value1 - value2}`
 }
 
-let multiple = function(value1, value2) {
-    return `${value1}` * `${value2}`
+function multiple(value1, value2) {
+    return `${value1 * value2}`
 }
 
-let divide = function(value1, value2) {
-    return `${value1}` / `${value2}`
+function divide(value1, value2) {
+    return `${value1 / value2}`
 }
 
-let calculator = function(value1, value2, Fn) {
+let calculator = function(value1, value2, op='*') {
     let result
-    switch(Fn) {
-        case minus: result = minus(value1, value2); break
-        case multiple: result = multiple(value1, value2); break
-        case divide: result = divide(value1, value2); break
-        default: result = multiple(value1, value2)
+    switch(op) {
+        case '-': result = minus(value1, value2); break
+        case '*': result = multiple(value1, value2); break
+        case '/': result = divide(value1, value2)
     }
     return result
 }
 
-console.log(calculator(10, 5, minus))
-console.log(calculator(10, 5, divide))
-console.log(calculator(10, 5))
+console.log(calculator('10', '5', '-'))
+console.log(calculator('10', '5', '/'))
+console.log(calculator('10', '5'))

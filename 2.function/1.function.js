@@ -8,9 +8,10 @@ greet() //function은 call 하면 실행된다.
 let salute = function() {
     console.log('hi')
 }
-
-salute() //salute라는 변수data를 read하고 function이므로 파라미터를 붙여서 call한다.
-console.log(salute) //salute라는 변수data를 read해보면 function이다.
+//salute라는 변수data를 read하고 function이므로 파라미터를 붙여서 call한다.
+salute()
+//salute라는 변수data를 read해보면 salute라는 이름의 function이다.
+console.log(salute)
 
 let sayHello = function(user, greeting) {
     return `${greeting}, ${user}`
@@ -55,4 +56,6 @@ let showMsg = function(from, msg='no message'/*할당 연산자를 쓰고 기본
     console.log(`${from}: ${msg}`)
 }
 showMsg('trinity', 'follow rabbit')
-showMsg('trinity') //할당하지 않은 msg값은 undefined로 처리됨. -> default를 no message로 설정가능.
+//본래 할당하지 않은 msg값은 default가 undefined로 처리됨.
+//  -> 위에서 default를 no message로 설정했다.
+showMsg('trinity')
