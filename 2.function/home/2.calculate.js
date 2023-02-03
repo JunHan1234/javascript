@@ -15,7 +15,7 @@ let divide = function(value1, value2) {
     return `${value1}` / `${value2}`
 }
 
-let calculate = function(value1, value2, Fn) {
+let calculator = function(value1, value2, Fn) {
     let result
     switch(Fn) {
         case minus: result = minus(value1, value2); break
@@ -26,4 +26,6 @@ let calculate = function(value1, value2, Fn) {
     return result
 }
 
-console.log(calculate(10, 5))
+console.log(calculator(10, 5, minus))
+console.log(calculator(10, 5, divide))
+console.log(calculator(10, 5))
