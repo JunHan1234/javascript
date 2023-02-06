@@ -18,7 +18,7 @@ function printName(firstName, lastName, ...titles) {
     console.log(firstName, lastName)
     //각 배열 객체의 값에 접근
     console.log(titles[0], titles[1], titles[2])
-    console.log(titles.length)
+    console.log(titles.length) //기본key, length property이용.
 }
 
 printName('adam', 'smith', 'operator', 'consul') //빈 titles[2] 부분은 undefined로 출력된다.

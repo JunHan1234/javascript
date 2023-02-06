@@ -12,7 +12,7 @@ sayHi() //sayHi()가 call되면 local scope이 생성{}되고 실행.
 //----------------------------------------------------------------------
 
 //sayHello() // global LE에서 sayHello property의 첫 값이 uninitialized이므로,
-//             function call이 불가능한 것이다.
+//             function call이 불가능한 것이다. (error가 뜸.)
 //              왜냐하면, sayHello의 type은 const이기 때문이다.
 const sayHello = function() {
     console.log('Hello,', userName)

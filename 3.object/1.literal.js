@@ -40,5 +40,5 @@ let man = {
     2: 'two',
 }
 
-//man.1
+//man.1 //숫자 모양일 경우 []를 이용해야 한다.
 console.log(man['1'])

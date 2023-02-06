@@ -19,7 +19,8 @@ for(let key in user) console.log(user[key])
 
 //user object에 userName 추가.
 user.userName = 'parker'
-console.log(Object.keys(user)) //Object.keys라는 API를 이용한 user 원소배열 출력.
+//Object.keys라는 API를 이용한 user 원소들을 배열에 담아 return.
+console.log(Object.keys(user))
 console.log(Object.values(user))
 console.log(Object.entries(user))
 
@@ -41,7 +42,7 @@ user = {
 
 user.greet()
 
-/* optional chaining */
+/* optional chaining */ //-> app을 계속 살리는게 목적.
 user = {}
 let address = {}
 // key 값    = value 값
@@ -59,12 +60,12 @@ console.log(street)
 street = user?.city?.street ?? 'where' //undefined일 경우, return된 값을 뒤에 지정할 수 있다.
 console.log(street)
 
-//user?.address = 'sejong' //optional chaining은 할당연산자 오른편에 써야 문법에 맞다.
+//user?.address = 'sejong' //optional chaining은 할당연산자 오른편에 써야 문법에 맞다. (왼쪽에 쓰는 문법은 없다.)
 
 user = null //user의 값이 없다 를 표현.
 //user.greet() //null값을 읽을 수 없다가 출력됨.
-user?.greet() //user 객체가 있으면 greet()을 call하겠다. 없으면 무시.
-
+/*중요!*/user?.greet() //user 객체가 있으면 greet()을 call하겠다. 없으면 무시.
+//java style 대로 쓰지 말것! 하지 말라는 예) if(user.greet() != null) user.greet()
 
 user = {} //user 객체 생성.
 //user.greet() //greet은 function이 아니다 가 출력됨.
