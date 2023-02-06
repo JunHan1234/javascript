@@ -10,4 +10,4 @@ function makeFn() {
 
 let myFn = makeFn()
 
-myFn()
+myFn() //makeFn()()

@@ -45,12 +45,12 @@ let myFn = function(fn/*알아서 parameter로 function값이 들어오는구나
 }
 myFn(function() {
     return 'moon'
-})
+}) //parameter에서 function을 정의해서 바로 넣을 수 있다.
 
 let argFn = function() {
     return 'star'
-}
-myFn(argFn)
+} //먼저 변수에 function을 정의하고,
+myFn(argFn) //그 변수를 parameter에 넣을 수 있다.
 
 //default parameter
 let showMsg = function(from, msg='no message'/*할당 연산자를 쓰고 기본값 표기*/) {

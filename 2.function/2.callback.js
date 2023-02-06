@@ -27,7 +27,7 @@ function sayEven2(num) {
 
 lookNum(sayOdd2, sayEven2)
 
-//-----
+//----------------------------------------------------------------------
 let chef1 = function(food) {
     return `달콤한 ${food}.\n`
 }

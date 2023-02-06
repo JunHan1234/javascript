@@ -19,7 +19,7 @@ let val
 switch('boo') {
 //case 문은 한줄에 명령문이 2개라서, 각각의 명령문을 구별하기 위해 ; 를 넣었다.
     case 'bar': val = 'bar'; break
-    case 'baz': val = 'baz'
+    case 'baz': val = 'baz'; break
     default: val = 'all right'
 }
 
