@@ -1,4 +1,4 @@
-// global scope 지구 안의 작은 scope
+// global scope라는 지구 안에, 작은 scope 만들기
 // 지구에 a라는 변수 생성.
 let a = 1
 

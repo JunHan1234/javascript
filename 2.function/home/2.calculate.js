@@ -15,7 +15,7 @@ function divide(value1, value2) {
     return value1 / value2
 }
 //callback을 이용하는것은 calculator parameter로 function이 들어가야한다.
-function calculator(value1, value2, op=multiply) {
+function calculator(value1, value2, op = multiply) {
     return op(value1, value2)
 }
 

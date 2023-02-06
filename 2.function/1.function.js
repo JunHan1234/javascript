@@ -3,9 +3,9 @@ function greet() {
     console.log('hello')
 }
 
-greet() //function은 call 하면 실행된다.
+greet() //function은 call 하면 function의 local scope{}이 실행된다.
 
-//function을 변수에 저장하여 사용.
+//function을 변수에 저장하여 사용. (function을 data 취급.)
 let salute = function() {
     console.log('hi')
 }

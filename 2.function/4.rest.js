@@ -21,7 +21,7 @@ function printName(firstName, lastName, ...titles) {
     console.log(titles.length)
 }
 
-printName('adam', 'smith', 'operator', 'consul')
+printName('adam', 'smith', 'operator', 'consul') //빈 titles[2] 부분은 undefined로 출력된다.
 
 //parameter가 없는 경우 arguments 객체가 기본 준비된다.
 // 유지보수 곤란하므로 사용하진 말자.
@@ -33,13 +33,13 @@ function showName() {
 showName()
 showName('erica', 'terry')
 
-//spread 예제
+//spread 예제, 가장 큰 수를 나타내는 method.
 console.log(Math.max(1, 2, 3))
 
 //배열 객체 생성.
 let arr = [1, 2, 3]
-console.log(Math.max(arr))
-//arr의 값들을 spread하여 console에 출력.
+console.log(Math.max(arr)) //배열을 못읽어 NaN이 출력됨을 확인.
+//배열 arr의 값들을 spread하여 그 중 가장 큰 수를 console에 출력.
 console.log(Math.max(...arr))
 
 let arr2 = [4, 5, 6]
