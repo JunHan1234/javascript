@@ -3,6 +3,7 @@ function sayHi() {
 }
 
 setTimeout(sayHi, 1000) //1000ms(1초)가 지난 후 sayHi가 call되도록 하는 API.
+//queue에는 sayHi function이 저장된다.
 
 function greet(phrase, who) {
     console.log(phrase, who)
