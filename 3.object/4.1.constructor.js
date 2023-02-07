@@ -14,7 +14,7 @@ makeUser = function(userName, age) {
 
 console.log(makeUser('doris', 57))
 
-//생성자는 변수 첫 시작이름을 대문자로 쓴다.
+//생성자는 변수 첫 시작이름을 대문자로 쓴다.(명사.) //일반 function은 동사.
 function User(userName) {
     //this = {} //new를 사용하는 경우 첫부분에 이게 추가되는 효과
     this.userName = userName
@@ -65,14 +65,14 @@ console.log(BigUser().userName, SmallUser()?.userName)
 
 console.log() //\n
 
-const user = new Object()
+const user = new Object() //object literal을 이용한 객체 생성.
 console.log(user) //Object()을 이용한 빈 {} 생성.
 user.age = 12
 
 //view object
 const person = Object.create(user)
 console.log(person) //person객체에는 property가 없음을 확인. 그저, user를 바라보는(view) 역할.
-console.log(person.age) //person객체를 통해 user의 property를 바라볼 수 있다.
+console.log(person.age) //person객체를 통해(person객체에는 age property가 없으므로.) 부모객체인 user의 property를 바라볼 수 있다.
 console.log(person == user)
 
 person.personName = 'mandarin' //person에 자신의 property를 얼마든지 추가 가능.

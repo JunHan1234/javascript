@@ -1,6 +1,6 @@
 /* symbol: unique identifier */
 //symbol은 유일한 값이다.
-let id = Symbol()
+let id = Symbol()     //Symbol 을 function으로서 call.
 let id1 = Symbol('id')//parameter는 symbol에 대한 설명문(discription)
 let id2 = Symbol('id')//생성에는 영향을 끼치지 않는다.
 
@@ -19,9 +19,10 @@ let user = {
     userName: 'neo'
 }
 
+//user의 key로 올 수 있는 값은 string이나 symbol 둘 중 하나이다.
 let userId = Symbol('userId')
-user.userId = 1 //userId property를 생성하고 value 1을 할당.
-user[userId] = 2//Symbol type userId를 user의 property로 삽입한다.
+user.userId = 1 //userId property를 생성하고 value 1을 할당. string.
+user[userId] = 2//Symbol type userId를 user의 property로 삽입한다. symbol.
 
 console.log(user)
 
@@ -43,4 +44,4 @@ id1 = Symbol.for('regNo') //global symbol - parameter를 key라고 부른다.
 id2 = Symbol('regNo')     //local symbol  - parameter를 discription이라 부른다.
 console.log(id1 == id2)
 
-console.log(Symbol.keyFor(id1), Symbol.keyFor(id2))
+console.log(Symbol.keyFor(id1), Symbol.keyFor(id2)) //local symbol은 key가 없다.
