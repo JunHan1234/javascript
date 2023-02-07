@@ -2,7 +2,7 @@ let val = 1 + 2 * 3 / 2
 console.log(val, 5 % 2/*나머지*/, 4 ** 2/*제곱*/, 4 ** (1/2)/*루트*/)
 
 let i = 1
-console.log(i++)
+console.log(i++)/*i값을 log출력 후에 1증가.*/
 console.log(++i/*i를 1증가시키고 log출력.*/,
              i++/*위에서 1증가한 i값을 log출력 후에 1증가.*/)
 

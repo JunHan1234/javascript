@@ -13,15 +13,15 @@ console.log(id.toString()) //String으로 변환 후 console 출력.
 console.log(typeof id)
 
 //symbol type의 기본 property인, description을 이용한 설명문 출력.
-console.log(id1.description, id2.description, id.description)
+console.log(id.description, id1.description, id2.description)
 
 let user = {
     userName: 'neo'
 }
 
 let userId = Symbol('userId')
-user.userId = 1
-user[userId] = 2
+user.userId = 1 //userId property를 생성하고 value 1을 할당.
+user[userId] = 2//Symbol type userId를 user의 property로 삽입한다.
 
 console.log(user)
 
@@ -36,7 +36,7 @@ id1 = Symbol.for('regNo') //for function의 parameter는 key로 사용된다.
 id2 = Symbol.for('regNo') //동일한 key 사용.
 console.log(id1 == id2) //global하게 사용하고 싶으면 for function 사용!
 
-let key = Symbol.keyFor(id1)
+let key = Symbol.keyFor(id1) //id1의 key값을 알아본다.
 console.log(key, typeof key)
 
 id1 = Symbol.for('regNo') //global symbol - parameter를 key라고 부른다.

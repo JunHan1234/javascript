@@ -2,7 +2,6 @@
 1.calculate.js callback 으로 refactoring 하라.
 -, *, / 연산을 callback으로 처리한다.
 */
-
 function minus(value1, value2) {
     return value1 - value2
 }

@@ -11,8 +11,8 @@ user = {
     },
     'nick name': 'tiger face', //property name에 띄어쓰기를 포함하고싶다면 ''로 감싸줘야 한다.
     age: 13,
-    interests: ['music', 'movie'],
-    sing: () => console.log('lala')
+    interests: ['music', 'movie'], //property value를 배열로 생성 가능하다.
+    sing: () => console.log('lala')//property value를 function으로 생성 가능하다.
 }
 
 console.log(user.userName)

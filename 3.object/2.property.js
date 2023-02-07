@@ -33,7 +33,6 @@ user = {
 user = {
     greet: () => console.log('hello')
 }
-
 user = {
     greet() {
         console.log('hello')
@@ -64,8 +63,9 @@ console.log(street)
 
 user = null //user의 값이 없다 를 표현.
 //user.greet() //null값을 읽을 수 없다가 출력됨.
-/*중요!*/user?.greet() //user 객체가 있으면 greet()을 call하겠다. 없으면 무시.
-//java style 대로 쓰지 말것! 하지 말라는 예) if(user.greet() != null) user.greet()
+/*중요! javascript style.*/
+user?.greet() //user 객체가 있으면(null이 아니면,) greet()을 call하겠다. 없으면 무시하고 다음줄로 넘어간다.
+//java style 대로 쓰지 말것! // 하지 말라는 예) if(user.greet() != null) user.greet()
 
 user = {} //user 객체 생성.
 //user.greet() //greet은 function이 아니다 가 출력됨.

@@ -26,9 +26,27 @@ function Player(playerName) {
 // 과제:
 // 최한석이 한아름에게 공을 패스한다. 한아름은 양승일에게 공을 패스한다.
 // 양승일은 공을 찬다.
-let ball = new Ball()
-let player1 = new Player('최한석')
-let player2 = new Player('한아름')
-let player3 = new Player('양승일')
+const ball = new Ball()
+const player1 = new Player('최한석')
+const player2 = new Player('한아름')
+const player3 = new Player('양승일')
 
-console.log(player3.kick(player2.pass(player1.pass(ball))))
+player3.kick(player2.pass(player1.pass(ball)))
+
+//----------------------------------------------------------------------
+function Food(foodName) {
+    this.foodName = foodName
+}
+
+function Mom() {
+    this.cook = foodName => new Food(foodName)
+}
+
+function Child() {
+    this.eat = food => console.log(food)
+}
+
+const mom = new Mom()
+const child = new Child()
+
+child.eat(mom.cook('짜장면'))

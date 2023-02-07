@@ -27,14 +27,13 @@ console.log(user1) //객체 생성을 안하고 있음을 확인.
 */
 let user1 = new User('bob') //new라는 연산자를 이용해 객체 생성.
 console.log(user1)
-
 user1.greet()
 console.log(Object.keys(user1))
 
-console.log() //줄바꿈
-
 const user2 = new User('sarah')
 user2.greet()
+
+console.log() //줄바꿈
 
 let str = String(1) //1을 string type으로 변환.
 console.log(typeof str)
@@ -46,11 +45,11 @@ console.log() //줄바꿈
 
 //지금까지 배운 객체 생성 방법 2가지: object literal, 생성자.
 
-let human = new function() {
+let human = new function() { //새로운 function객체 생성.
     this.humanName = 'meg'
     this.age = 27
 }
-console.log(typeof human, human.humanName)
+console.log(typeof human, human.humanName, human.age)
 
 function BigUser() {
     this.userName = 'amy'
@@ -72,7 +71,7 @@ user.age = 12
 
 //view object
 const person = Object.create(user)
-console.log(person)
+console.log(person) //person객체에는 property가 없음을 확인. 그저, user를 바라보는(view) 역할.
 console.log(person.age) //person객체를 통해 user의 property를 바라볼 수 있다.
 console.log(person == user)
 
