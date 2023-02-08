@@ -14,7 +14,7 @@ greet()
 let fn = greet.bind(user)
 fn() //greet.bind(user)()
 
-//setTimeout(fn, 100)
+//setTimeout(fn, 100) //잘 실행됨.
 
 user = {
     userName: 'john',

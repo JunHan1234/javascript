@@ -8,7 +8,6 @@ animal.animalName = 'animal'
 
 //과제: 토끼를 object literal 및 constructor 로 만들어라.
 //      토끼는 age = 3, property 를 갖고 있다.
-
 let rabbit = {
     age: 3
 }
@@ -16,7 +15,7 @@ let rabbit = {
 rabbit = new Object()
 rabbit.age = 3
 
-
+//객체의 prototype은 생성자의 prototype을 그대로 복사함.
 console.log(animal.__proto__) //Object 생성자로 만들었기 때문에 Object.prototype을 갖는다.
 console.log(animal.__proto__ == Object.prototype)
 console.log(rabbit.__proto__) //마찬가지.

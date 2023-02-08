@@ -7,7 +7,7 @@ let user = {
 
 user.greet()
 
-setTimeout(user.greet, 100)
+setTimeout(user.greet, 100) //setTimeout의 parameter로 user라는 주어는 필요치 않다.
 
 let fn = user.greet
 setTimeout(fn, 200)

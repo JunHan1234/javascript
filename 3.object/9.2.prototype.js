@@ -5,7 +5,7 @@ console.log(obj.__proto__ == Object.prototype) //Object 생성자로 만들었�
 
 obj = new Object()
 console.log(obj.__proto__)
-console.log(Object.prototype.__proto__) //Object type의 prototype의 prototype은 없다. Object.prototype은 최상위 class.
+console.log(Object.prototype.__proto__) //Object type의 prototype의 prototype은 없다. Object.prototype은 최상위 객체.
 
 console.log(obj.toString())
 

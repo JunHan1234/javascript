@@ -4,7 +4,7 @@ let animal = {
 }
 
 function Rabbit(rabbitName) { //new가 작동할때 비로소 Rabbit function은 생성자가 된다.
-    this.rabbitName = rabbitName
+    this.rabbitName = rabbitName //prototype에 속성값들이 저장된다.
 }
 //function객체.prototype //생성자 안에는 prototype이 존재한다.
 console.log(Rabbit.prototype) //plain object -> prototype의 객체이다.

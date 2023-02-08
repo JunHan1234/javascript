@@ -1,3 +1,4 @@
+//react에서 쓰지 않는 기법이다.
 class User {
     constructor(userName) {
         this.userName = userName

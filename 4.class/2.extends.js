@@ -1,16 +1,16 @@
 class Animal {
-    constructor(animalName) {
-        this.animalName = animalName
+    constructor(name) {
+        this.name = name
     }
 
     run(speed) {
         this.speed = speed
-        console.log(this.animalName, this.speed, 'run.')
+        console.log(this.name, this.speed, 'run.')
     }
 
     stop() {
         this.speed = 0
-        console.log(this.animalName, this.speed, 'stop.')
+        console.log(this.name, this.speed, 'stop.')
     }
 }
 
@@ -31,7 +31,7 @@ class Rabbit extends Animal {
     }
     */
    hide() {
-        console.log(this.animalName, 'hide.')
+        console.log(this.name, 'hide.')
    }
 }
 
@@ -40,17 +40,20 @@ console.log(rabbit)
 
 rabbit = new Rabbit('rabbit')
 console.log(rabbit)
-console.log(rabbit.animalName)
+
+console.log(rabbit.name)
 rabbit.run(100) //부모의 property 사용.
 console.log(rabbit) //rabbit객체에 speed property가 생성됨을 확인.
+rabbit.stop()
+console.log(rabbit)
 rabbit.hide()
 
 console.log() //\n
 
 //extends 2번째 모양.
 Rabbit = class extends Animal {
-    constructor(rabbitName, color) {
-        super(rabbitName)
+    constructor(name, color) {
+        super(name)
         this.color = color
     }
 
@@ -60,7 +63,7 @@ Rabbit = class extends Animal {
     }
 
     hide() {
-        console.log(this.color, this.animalName, 'hide.')
+        console.log(this.color, this.name, 'hide.')
     }
 }
 
