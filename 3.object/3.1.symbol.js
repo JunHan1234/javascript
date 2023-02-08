@@ -33,9 +33,9 @@ console.log(Object.keys(user)) //API를 이용해도 symbol은 감춰져서 안�
 
 console.log() //줄바꿈
 
-id1 = Symbol.for('regNo') //for function의 parameter는 key로 사용된다.
+id1 = Symbol.for('regNo') //Symbol type의 API, for function의 parameter는 key로 사용된다.
 id2 = Symbol.for('regNo') //동일한 key 사용.
-console.log(id1 == id2) //global하게 사용하고 싶으면 for function 사용!
+console.log(id1 == id2) //Symbol type을 global하게 사용하고 싶으면 for function 사용!
 
 let key = Symbol.keyFor(id1) //id1의 key값을 알아본다.
 console.log(key, typeof key)

@@ -20,9 +20,13 @@ console.log(Array.prototype.__proto__ == Object.prototype) //따라서 같다.
 console.log(arr2.toString()) //Array의 toString method를 사용.
 
 let one = new Number(1)
-console.log(one.toString())
+console.log(one.toString()) //Number의 toString method를 사용.
 
 function User() {}
 let user = new User()
-console.log(user.toString()) //user객체에 toString()이 없으므로,User prototype으로 가서 찾고, 없으므로 Object prototype의 toString method를 사용.
+//user객체에 toString()이 없으므로, User prototype으로 가서 찾고,
+// 또 없으므로 Object prototype의 toString method를 사용.
+console.log(user.toString())
+
+//Object.prototype의 toString method 사용.
 console.log(obj.toString())

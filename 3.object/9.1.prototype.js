@@ -26,7 +26,7 @@ function Duck(duckName) {
 }
 
 console.log(Duck.prototype) //plain object.
-console.log(Duck.prototype.constructor) //Duck function을 가리킨다.
+console.log(Duck.prototype.constructor) //Duck function을 가리킨다. ==> 여기서 prototype과 Duck function은 서로가 서로를 가리키고 있는것을 알 수 있다.
 console.log(Duck.prototype.constructor == Duck) //true임을 확인.
 
 let duck = new Duck('duck')
@@ -34,7 +34,11 @@ console.log(duck.__proto__)//duck객체의 prototype값을 읽는다. == Duck.pr
 console.log(duck.__proto__.constructor)// == Duck.prototype.constructor
 
 let duck2 = new Duck('duck2')
-console.log(duck2.__proto__ == duck.__proto__) //두 객체의 prototype이 같음을 확인.
+console.log(duck2.__proto__ == duck.__proto__) //true. 두 객체의 prototype이 같음을 확인.
 
-let duck3 = new duck.__proto__.constructor('duck')
-duck3 = new duck.constructor('duck')
+let duck3 = new duck.__proto__.constructor('duck') //Duck.prototype.constructor('duck')
+//duck객체에 constructor에는 parameter가 없으므로, 
+//부모 객체인 Duck의 constructor를 찾고, 마찬가지로 parameter가 없으므로
+//그 prototype의 constructor를 이용한다.
+duck3 = new duck.constructor('duck') 
+console.log(duck3)

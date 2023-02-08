@@ -42,7 +42,10 @@ rabbit = new Rabbit('rabbit')
 console.log(rabbit)
 console.log(rabbit.animalName)
 rabbit.run(100) //부모의 property 사용.
+console.log(rabbit) //rabbit객체에 speed property가 생성됨을 확인.
 rabbit.hide()
+
+console.log() //\n
 
 //extends 2번째 모양.
 Rabbit = class extends Animal {
@@ -62,4 +65,8 @@ Rabbit = class extends Animal {
 }
 
 rabbit = new Rabbit('rabbit', 'black')
+console.log(rabbit)
 rabbit.stop()
+console.log(rabbit)
+
+console.log(rabbit.__proto__ == Rabbit.prototype)

@@ -33,6 +33,7 @@ user = {
 user = {
     greet: () => console.log('hello')
 }
+//위 코드와 동일의미.
 user = {
     greet() {
         console.log('hello')
@@ -47,7 +48,7 @@ let address = {}
 // key 값    = value 값
 user.address = address
 address.street = 'sejong'
-console.log(user.address.street)
+console.log(user.address.street) // sejong
 //console.log(user.city.cityName) //undefined의 properties는 읽을 수 없다가 출력됨.
 console.log(user.city?.cityName) //optional chaining. 앱은 죽지 않고 undefined값 출력하고 해당 줄을 끝낸다.
 

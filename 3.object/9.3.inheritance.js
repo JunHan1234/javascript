@@ -16,8 +16,11 @@ let rabbit = {
 rabbit = new Object()
 rabbit.age = 3
 
-console.log(animal.__proto__) //Object 생성자로 만들었기 때문에 Object prototype을 갖는다.
+
+console.log(animal.__proto__) //Object 생성자로 만들었기 때문에 Object.prototype을 갖는다.
+console.log(animal.__proto__ == Object.prototype)
 console.log(rabbit.__proto__) //마찬가지.
+console.log(rabbit.__proto__ == Object.prototype)
 
 console.log(rabbit.animalName, rabbit.age)
 
@@ -41,10 +44,12 @@ let administrator = {
     __proto__: user //administrator is an user
 }
 
-console.log(administrator.userName)
+console.log(administrator.userName) //admin property에 없으므로, prototype인 user의 property를 이용했다.
+console.log(administrator) // {}
 
 administrator.userName = 'jonadan' //admin 속성으로 userName 추가했다.
 console.log(administrator.userName)
+console.log(administrator) // { userName: 'jonadan' }
 
 animal = {
     animalName: 'animal',
@@ -71,11 +76,11 @@ lion.eat()   //부모의 eat() 사용.
 console.log(Object.keys(rabbit))
 
 for(let key in rabbit)
-    console.log(key) //자신의 속성을 본 뒤, 부모속성도 모두 바라본다.
+    console.log(key) //자신의 속성을 본 뒤, __proto__로 가리키는 부모의 prototype 속성도 모두 바라본다.
 
 let msg
 for(let key in rabbit) {
-    let isOwn = rabbit.hasOwnProperty(key) //자신의 key 속성을 isOwn에 넣는다.
-    msg = isOwn ? `child's key: ${key}` : `parent's key: ${key}`
+    let isOwn = rabbit.hasOwnProperty(key) //자신의 key 속성이면 true, 아니면 false를 isOwn에 넣는다.
+    msg = isOwn ? `child's key: ${key}` : `parent's key: ${key}` //msg에 true : false 저장.
     console.log(msg)
 }

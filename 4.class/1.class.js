@@ -42,4 +42,4 @@ function makeClass(phrase) {
 }
 
 User = makeClass('hello') //User class를 만든다.
-new User().sayHi() //User class를 생성해서 sayHi()를 call해본다.
+new User().sayHi() //new를 이용하여 User class의 객체를 생성해서 sayHi()를 call해본다.
