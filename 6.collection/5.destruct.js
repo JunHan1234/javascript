@@ -6,6 +6,7 @@ let [firstName, lastName] = arr //arr의 key들을 흩뿌려 firstName과 lastNa
 console.log(firstName, lastName)
 
 //변수의 개수가 안맞는경우
+//배열을 destruct할때는 []를 이용한다.
 let [one, two] = [1, 2, 3]
 console.log(one, two) //남는 변수는 throw함.
 
@@ -66,9 +67,22 @@ let options = {
     width: 100,
     height: 200
 }
-//{}를 이용함을 확인. 순서가 달라도 알아서 동일명 변수에 각각 잘 담긴다.
+//객체를 destruct할때는 {}를 이용함을 확인.
+// 순서가 달라도 알아서 동일명 변수에 각각 잘 담긴다.
 let {title, height, width} = options
 console.log(title, height, width);
 
 ({title, height, width} = options)
 console.log(title, height, width)
+
+//다음과 같이 궁극적으로 변수명을 다르게 바꿀수도 있다.
+let {width: w, height: h} = options
+console.log(w, h)
+
+let {title: t, ...other} = options
+console.log(t, other) //other에는 객체가 들어감을 확인. array일때는 array가 rest에 들어갔었음.
+
+//option에 없는 key를 사용할 경우.
+//기본값 undefined에서 설정기본값 할당 가능.
+let {title: subject, wide=10} = options
+console.log(subject, wide)
