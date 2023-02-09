@@ -179,7 +179,7 @@ const item = items.find(item => item.itemName == 'book') //find는 callback에�
 console.log(item)
 
 //            /*find와 filter의 parameter는 2개이상 넣을 수 있다.*/
-//            2번째 parameter는 동일한 항목이 검색될 시, i번째 나오는 true값을 return해준다.
+//            2번째 parameter는 동일한 항목이 검색될 시, i(index)번째 나오는 true값을 return해준다.
 const interest = items.filter((item, i) => item.itemName == 'book') //callback에서 true인 element를 모조리 다 return.
 console.log(interest)
 
@@ -187,3 +187,16 @@ console.log(interest)
 const elements = items.map((item, i) => 
     `<div>${item.itemName}: ${item.price}</div>`)
 console.log(elements)
+
+//reduce.
+const totalPrice = items.reduce((total, item) => {
+    total += item.price
+    return total
+}, 0/*reduce의 2번째 parameter에 total의 값 저장.*/) 
+console.log(totalPrice)
+
+//some & every. boolean을 return하는 callback으로 구성.
+let isExit = items.some(item => item.itemName == 'book') //한개 element만 true여도 true return.
+console.log(isExit)
+isExit = items.every(item => item.itemName == 'book') //모든 element가 true여야 true return.
+console.log(isExit)
