@@ -1,6 +1,6 @@
 function laugh(cnt) {
     if(cnt <= 0/*0이하를 걸러냄.*/ || Math.trunc(cnt) != cnt/*실수값을 걸러냄.*/)
-        throw new Error('반복 횟수는 자연수이어야 합니다.')
+        throw new Error('반복 횟수는 자연수이어야 합니다.') //if구문이 true이면 이 줄이 실행됨.
 
     let phrase = ''
     for(let i = 0; i < cnt; i++) phrase += 'ha '

@@ -7,7 +7,7 @@ try {
     user && console.log(user.age)
 
     if(user.age) console.log(user.age) //java style
-    else throw new SyntaxError('user.age가 없습니다.') //else를 쓰려면 7번째줄에서 삼항연산자를 쓰거나, 9번째줄처럼 if구문을 쓴다.
+    else throw new SyntaxError('user.age가 없습니다.') //javascript style로 else를 쓰려면 7번째줄에서 삼항연산자를 쓰거나, 그냥 java style대로 9번째줄처럼 if구문을 쓴다.
 } catch(e) {
     if(e instanceof SyntaxError)
         console.log('ERROR] ' + e.message)
