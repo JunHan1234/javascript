@@ -8,7 +8,8 @@ let user = {
 user.greet()
 
 setTimeout(user.greet, 100) //setTimeout의 parameter로 user라는 주어는 필요치 않다.
-
+//bind로 this 객체를 묶어주면 user객체의 property를 정상적으로 잡아 return할 수 있다.
+//setTimeout(user.greet.bind(user))
 let fn = user.greet
 setTimeout(fn, 200)
 
