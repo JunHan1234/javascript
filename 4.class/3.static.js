@@ -48,7 +48,7 @@ console.log(article1 + '') //의도와는 다르게 valueOf이 실행된다. art
 console.log('' + article1)
 
 //
-console.log(article1.publisher, article2.publisher, article1.compare) //publisher, compare등은 Article class에 저장되기 때문.
+console.log(article1.publisher, article2.publisher, article1.compare) //publisher, compare등은 Article class에 저장되기 때문. static.
 console.log(Article.title, Article.viewCnt) //title, viewCnt는 new 하면 그 객체에 저장되기 때문.
 
 console.log(Object.keys(Article))

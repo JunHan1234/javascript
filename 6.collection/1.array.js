@@ -1,3 +1,4 @@
+//hr.jQuery의 준비!
 //Array에는 다양한 type의 값들이 들어갈 수 있다.
 let arr = new Array(1, 'hello', true, {age: 3}, function fn(){}, class A{})
 console.log(arr)
@@ -7,7 +8,7 @@ console.log(arr)
 
 
 arr = []
-arr[0] = 'a'
+arr[0] = 'a' //object의 관점: arr[key] = value
 arr[2] = 'c'
 
 console.log(arr) //arr[1]은 empty상태임을 확인.
@@ -26,7 +27,7 @@ let matrix = [
 
 let a = [1, 2]
 let b = [2, 3]
-let c = a.concat(b) //붙이기 API
+let c = a.concat(b) //주어와 목적어 붙이기 API
 console.log(c)
 
 //collection method 'push', 'pop' & 'shift', 'reverse', 'slice' & 'splice'
@@ -58,7 +59,7 @@ b = a.slice(1) //a[1]부터의 배열을 잘라서 b에 넣는다.
 console.log(b, a)
 
 arr = [0, 7, 8, 5]
-arr.splice(0/*index부터*/, 2/*length*/, 1, 2, 3, 4) //arr[0]부터 length만큼 버리고, 버린 부분에 값들을 끼워 채운다.
+arr.splice(0/*index*/, 2/*length*/, 1, 2, 3, 4) //arr[0]부터 length만큼 버리고, 버린 부분에 값들을 끼워 채운다.
 console.log(arr)
 
 arr = ['a', 'b', 'c']
@@ -87,7 +88,7 @@ console.log(s == arr) //true이므로 s는 view object이 아니다.
 arr = [8, 11, 22, 23, 9]
 console.log(arr.sort()) //sort()는 원소들을 정렬할때 string으로 취급하고 처리한다.
 
-//해결법. sort()의 parameter로 callback을 넣어준다.
+//해결법. sort()의 parameter로 callback을 넣어준다. (이 callback을 comparator라 한다.)
 console.log(arr.sort((a, b) => a - b)) //오름차순 정렬로 callback을 넣어준다.
 console.log(arr.sort((a, b) => b - a)) //내림차순 정렬로 callback을 넣어준다.
 
@@ -98,21 +99,21 @@ for(let i = 0; i < arr.length; i++) //기본적인 iterating.
     console.log(arr[i])
 
 // 과제: 위와 다른 for로 arr을 iterating 하라.
-for(let e of arr) console.log(e) //collection의 element를 뽑아낸다.
-for(let key in arr) console.log(arr[key]) //arr를 object으로 보고 key값들을 뽑아낸다.
+for(let e of arr) console.log(e) //arr가 collection경우의 element를 뽑아낸다. (of collection)
+for(let key in arr) console.log(arr[key]) //arr를 object으로 보고 key값들을 뽑아낸다. (in object)
 
 console.log() //\n
 
 //callback으로 사용할 function들을 준비.
-function print(e) {
+function print(e) { //element
     console.log(e)
 }
 
-function print2(e, i) {
+function print2(e, i) { //element, index
     console.log(`[${i}]: ${e}`)
 }
 
-function print3(e, i, arr) {
+function print3(e, i, arr) { //element, index, collection
     arr[i] = e.toUpperCase() //element를 대문자로 교체하겠다.
 }
 
@@ -125,14 +126,14 @@ console.log(arr)
 
 //
 arr = [1, 2, 3]
-//map이 return한 배열은 주어(접두사)로 쓴 배열과 다르다. 
+//map이 return한 배열은 주어(접두사)로 쓴 배열과 다르다. 새로운 배열을 return.
 //따라서, arr의 값이 새로이 바뀌는게 아니므로,
 //새로운 변수 arr2에 return값을 담아서 사용해야한다.
 let arr2 = arr.map(e => e * 2)
 console.log(arr, arr2, arr == arr2)
 
 //namespace로서 사용할 group 준비
-//array와 비교하기 위해서 다양한 type들을 준비해본다.
+//array와 비교하기 위해서 다양한 type들을 준비해본다. 둘다 결국 object.
 let group = {
     title: 'art',
     students: ['winston', 'cal', 'maritha'],
@@ -179,7 +180,7 @@ console.log(item)
 
 //            /*find와 filter의 parameter는 2개이상 넣을 수 있다.*/
 //            2번째 parameter는 동일한 항목이 검색될 시, i번째 나오는 true값을 return해준다.
-const interest = items.filter((item, i) => item.itemName == 'book') //callback에서 true인 값을 모조리 다 return.
+const interest = items.filter((item, i) => item.itemName == 'book') //callback에서 true인 element를 모조리 다 return.
 console.log(interest)
 
 //map을 이용한 html element로 return하기. hr과제에 이용.

@@ -32,9 +32,9 @@ CoffeeMachine = class {
 machine = new CoffeeMachine()
 console.log(machine)
 
-machine.waterAmount = 1 //할당 연산자를 이용하면, setter가 작동한다.
+machine.waterAmount = 1 //할당 연산자를 이용하면, setter가 작동(call)한다.
 console.log(machine.waterAmount) //할당 연산자 없이 waterAmount를 이용하면, getter가 작동한다.
 
 machine._waterAmount = 11
-//protected가 안되고 waterAmount property에 바로 접근한것을 확인.
+//setter가 call안되고, waterAmount property에 바로 접근한것을 확인. backdoor.
 console.log(machine._waterAmount) //getter는 _변수를 이용해 접근하면 작동안한다.

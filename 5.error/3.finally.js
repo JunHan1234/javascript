@@ -16,7 +16,7 @@ try {
     laugh(3.1)
 } catch(e) {
     console.log(e.message)
-} finally {
+} finally { //try 블럭의 성공실패에 관계없이 무조건 실행.
     diff = Date.now() - start
 }
 

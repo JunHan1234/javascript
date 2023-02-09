@@ -1,3 +1,4 @@
+//react에서 버린 문법. 안씀.
 class CoffeeMachine {
     #waterAmount //private key를 준비한다.
 
