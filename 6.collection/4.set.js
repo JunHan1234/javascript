@@ -17,9 +17,9 @@ console.log(set)
 
 set.add(user1)
 
+//iterating.
 for(let user of set) console.log(user)
-
-//forEach.
+//iterating. forEach.
 set.forEach(val => console.log(val))
 
 //Set 생성자 이용한 array집어넣어 set 만들기.

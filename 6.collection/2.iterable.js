@@ -2,7 +2,7 @@ let range = {
     from: 1,
     to: 3,
 
-    //iterator의 조건 2개 symbol.iterator & next()
+    //Symbol.iterator의 조건 2개 symbol.iterator & next()
     [Symbol.iterator]() {
         this.current = this.from //current 속성을 가진 this객체 return.
         return this
@@ -25,6 +25,7 @@ let range = {
 for(let num of range)
     console.log(num)
 
+console.log()
 
 //위 지저분한 코드를 개선시킨 문법, generator.
 function* generator() { //generator는 function* & yield를 꼭 써줘야 한다.

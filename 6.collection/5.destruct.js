@@ -13,7 +13,7 @@ console.log(one, two) //남는 변수는 throw함.
 let [three, four] = [3]
 console.log(three, four)
 
-let [one2, three2] = [1, 2, 4]
+let [one2, three2] = [1, 3, 4]
 console.log(one2, three2)
 
 //
@@ -21,7 +21,7 @@ let s = 'i am'
 let [a, b, c] = s
 console.log(a, b, c) //i 와 space문자와 a까지 쪼개져서 변수에 각각 담김을 확인. m은 버려진다.
 
-//변수.split(구분자) = 구분자를 기준으로 변수값을 쪼갠다. => join과 split은 음양으로 사용하면 된다.
+//변수.split(구분자) = 구분자를 기준으로 변수값을 쪼개서 array로 return한다. => join과 split은 음양으로 사용하면 된다.
 arr = s.split(' ')
 console.log(arr)
 
@@ -30,7 +30,7 @@ console.log(a2, b2)
 
 //할당 연산자 오른편에 set을 넣어보자.
 let [a3, b3] = new Set(arr)
-console.log(a3, b3)
+console.log(a3, b3) //set도 destruct되어 각 변수에 잘 들어간다.
 
 //destruct로 arr를 iterating.
 let user = {
@@ -49,6 +49,7 @@ let map = new Map([
     ['userName', 'oscar'],
     ['age', 6]
 ])
+console.log(map)
 
 for(let [key, value] of map)
     console.log(key, value)
@@ -72,6 +73,7 @@ let options = {
 let {title, height, width} = options
 console.log(title, height, width);
 
+//let을 안써도 되도록 coding해보았다. (안씀.)
 ({title, height, width} = options)
 console.log(title, height, width)
 
@@ -80,7 +82,7 @@ let {width: w, height: h} = options
 console.log(w, h)
 
 let {title: t, ...other} = options
-console.log(t, other) //other에는 객체가 들어감을 확인. array일때는 array가 rest에 들어갔었음.
+console.log(t, other) //객체일 경우, other에는 객체가 들어감을 확인. array일때는 array가 rest에 들어갔었음.
 
 //option에 없는 key를 사용할 경우.
 //기본값 undefined에서 설정기본값 할당 가능.
@@ -98,8 +100,8 @@ let bread = {
 }
 
 //과제: bread 에서 size와 items를 뽑아라.
-//let {size, items} = bread
-//console.log(size, items)
+let {size, items} = bread
+console.log(size, items)
 
 //
 let {
@@ -111,7 +113,7 @@ let {
 } = bread
 console.log(w2, h2, item1, item2)
 
-//이 기법을 잘 기억해두자.
+//이 기법을 잘 기억해두자. hr 활용!
 let menu = {
     title: 'menu',
     items: ['list', 'add'],
@@ -119,7 +121,7 @@ let menu = {
 }
 
 function showMenu({title: t, items: [i1, i2]}) { //이 역시 변수명을 새로 지정가능하다.
-    console.log(title, i1, i2)
+    console.log(t, i1, i2)
 }
 
 showMenu(menu)

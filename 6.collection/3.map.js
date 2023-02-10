@@ -13,7 +13,7 @@ console.log(map.has('1'), map.has(1), map.has(true), map.has(false))
 //array의 length와 유사한 property.
 console.log(map.size)
 
-//delete가 성공하면 true, 실패하면 false.
+//map.delete(key)가 성공하면 true, 실패하면 false.
 console.log(map.delete(1), map.delete(2))
 console.log(map)
 
@@ -51,12 +51,13 @@ for(let value of values)
 greens.forEach((val, key) => console.log(key, val))
 
 //map과 object사이에 공통점이 있으므로 object을 map으로 변환해보자.
+//map도 key를 정해야하고, object도 key를 기술한다.
 let user = {
     userName: 'aiden',
     age: 50
 }
 //entry = property
-let entries = Object.entries(user)
+let entries = Object.entries(user) //user object의 property를 배열로 전환.
 console.log(entries) //형태가 matrix.
 console.log(new Map(entries)) //matrix를 Map 생성자 parameter에 넣어 Map으로 변환.
 
@@ -65,6 +66,7 @@ map = new Map()
 map.set('apple', 1)
 map.set('orange', 2)
 map.set('pear', 3)
+console.log(map)
 //entries 생성하여 return한 object를 fruits에 저장.
 let fruits = Object.fromEntries(map)
 console.log(fruits)

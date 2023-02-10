@@ -37,7 +37,7 @@ let meetup = {
 
 console.log(JSON.stringify(meetup)) //잘 변환됨을 확인.
 
-//JSON으로 변활될 형태를 바꾸고 싶을때, toJSON method를 이용한다.
+//JSON으로 변환될 형태를 바꾸고 싶을때, toJSON method를 이용한다.
 room.toJSON = function() { return this.roomNumber }
 let s = JSON.stringify(meetup)
 console.log(s)

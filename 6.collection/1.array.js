@@ -164,7 +164,7 @@ console.log(str, typeof str)
 str = String(arr)
 console.log(str, typeof str)
 
-//serializing 할때 주로 사용하는 stringify.
+//json문법으로 serializing 할때 주로 사용하는 stringify.
 str = JSON.stringify(arr) //object로서의 arr를 string으로 통짜 변환한다.
 console.log(str, typeof str) //[]로 감싸진 구문이 string으로 변함을 확인.
 
@@ -192,11 +192,13 @@ console.log(elements)
 const totalPrice = items.reduce((total, item) => {
     total += item.price
     return total
-}, 0/*reduce의 2번째 parameter에 total의 값 저장.*/) 
+}, 0/*reduce의 2번째 parameter에 total의 initial값 저장.*/) 
 console.log(totalPrice)
 
 //some & every. boolean을 return하는 callback으로 구성.
+//itemName중에 'book'이 존재하는가?
 let isExit = items.some(item => item.itemName == 'book') //한개 element만 true여도 true return.
 console.log(isExit)
+//itemName이 전부 'book'인가?
 isExit = items.every(item => item.itemName == 'book') //모든 element가 true여야 true return.
 console.log(isExit)
