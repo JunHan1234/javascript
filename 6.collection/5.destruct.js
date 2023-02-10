@@ -62,6 +62,7 @@ console.log(x, y, rest)
 let [x2, y2=10] = [1]
 console.log(x2, y2)
 
+//react에서 많이 활용하는, 객체를 destruct하기.
 //object의 property value들을 동일 property name변수들에 할당하는법
 let options = {
     title: 'menu',
@@ -103,7 +104,7 @@ let bread = {
 let {size, items} = bread
 console.log(size, items)
 
-//
+//연속 destructing.
 let {
     size: {
         width: w2, /*{key가 담길 변수명을: 지정.}*/
@@ -124,4 +125,4 @@ function showMenu({title: t, items: [i1, i2]}) { //이 역시 변수명을 새�
     console.log(t, i1, i2)
 }
 
-showMenu(menu)
+showMenu(menu) //{title: t, items: [i1, i2]} = menu //function의 parameter에서 destructing 하기.

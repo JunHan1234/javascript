@@ -1,3 +1,4 @@
+//iterable object
 let range = {
     from: 1,
     to: 3,
@@ -20,9 +21,9 @@ let range = {
             }
     }
 }
-//num이 collection으로 볼 경우. range가 [Symbol.iterator]를 call한다(객체가 return되어 생성.).
+//num이 collection으로 볼 경우. range가 [Symbol.iterator]를 call한다(this객체가 return되어 생성.).
 //그리고 for에서 next를 반복 call한다.
-for(let num of range)
+for(let num of range) //range에 iterator 객체인 this객체가 들어간다.
     console.log(num)
 
 console.log()

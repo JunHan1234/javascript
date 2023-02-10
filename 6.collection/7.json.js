@@ -22,7 +22,7 @@ user = {
     [Symbol('id')]: 123,
     color: undefined
 }
-//json 변환시, method, symbol, undefined 가 버려짐을 볼 수 있다.
+//json 변환시, method, symbol, undefined 가 버려짐을 볼 수 있다. (문자열로 바꿀 수 있는것만 바꿈.)
 console.log(JSON.stringify(user))
 
 //

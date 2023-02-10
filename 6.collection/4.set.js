@@ -1,4 +1,4 @@
-//key가 없는 collection. set. (그러므로, 중복값이 없다.)
+//key가 없는 collection. set. (그러므로, 유일한 value가 저장되어 중복값이 없다.)
 let set = new Set()
 
 let user1 = {userName: 'john'}
