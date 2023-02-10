@@ -30,5 +30,5 @@ console.log(set)
 set = new Set('hello')
 console.log(set) //l이 중복되어 제거됨을 확인.
 
-let arr = Array.from(set) //key로 set을 넣는다.
+let arr = Array.from(set) //key로 set을 넣는다. set을 Array로 변환.
 console.log(arr)

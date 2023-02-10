@@ -86,3 +86,40 @@ console.log(t, other) //other에는 객체가 들어감을 확인. array일때�
 //기본값 undefined에서 설정기본값 할당 가능.
 let {title: subject, wide=10} = options
 console.log(subject, wide)
+
+//
+let bread = {
+    size: {
+        width: 100,
+        height: 200
+    },
+    items: ['cake', 'donut'],
+    extra: true
+}
+
+//과제: bread 에서 size와 items를 뽑아라.
+//let {size, items} = bread
+//console.log(size, items)
+
+//
+let {
+    size: {
+        width: w2, /*{key가 담길 변수명을: 지정.}*/
+        height: h2
+    },
+    items: [item1, item2] /*[원소가 담길 변수명들]*/
+} = bread
+console.log(w2, h2, item1, item2)
+
+//이 기법을 잘 기억해두자.
+let menu = {
+    title: 'menu',
+    items: ['list', 'add'],
+    expired: 10
+}
+
+function showMenu({title: t, items: [i1, i2]}) { //이 역시 변수명을 새로 지정가능하다.
+    console.log(title, i1, i2)
+}
+
+showMenu(menu)
