@@ -1,5 +1,5 @@
 interface Profile { //3개의 type으로 구성된 Profile이라는 새로운 type을 만들었다.
-    userId: number
+    userId: number  //object과의 차이점 - entry 사이에 ,가 없다. value값이 datatype이다.
     userName: string
     nickName: string
 }

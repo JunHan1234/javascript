@@ -1,4 +1,5 @@
-type Man = {
+//interface는 과거의 문법, type은 신문법.
+type Man = { //type은 할당 연산자를 사용하여 값으로 취급한다.
     manName: string
 }
 

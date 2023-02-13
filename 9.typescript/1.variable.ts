@@ -2,7 +2,7 @@ let msg: string = 'hello' //typescript의 datatype을 string type으로 정한 �
 //msg = 1 //typescript는 변수의 datatype을 정한다. (static variable type.)
 
 let val: number = 1
-let nullableStr: string | null = null //union type |을 이용한 합집합.
+let nullableStr: string | null = null //union type |을 이용한 합집합. n개의 data type기술가능.
 nullableStr = 'Hi'
 // nullableStr = undefined
 let undefinedOrNumber: undefined | number
