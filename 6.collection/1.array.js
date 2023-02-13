@@ -59,8 +59,9 @@ b = a.slice(1) //a[1]부터의 배열을 잘라서 b에 넣는다.
 console.log(b, a)
 
 arr = [0, 7, 8, 5]
-arr.splice(0/*index*/, 2/*length*/, 1, 2, 3, 4) //arr[0]부터 length만큼 버리고, 버린 부분에 값들을 끼워 채운다.
+b = arr.splice(0/*index*/, 2/*length*/, 1, 2, 3, 4) //arr[0]부터 length만큼 버리고, 버린 부분에 값들을 끼워 채운다.
 console.log(arr)
+console.log(b)
 
 arr = ['a', 'b', 'c']
 console.log(arr.indexOf('b'))
